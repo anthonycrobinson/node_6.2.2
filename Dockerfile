@@ -1,10 +1,10 @@
 FROM centos
 MAINTAINER Anthony Robinson
 
-# npmuser exists because bower doesn't like to run as root
+# deploy exists because bower doesn't like to run as root
 
 RUN cd \
-    && useradd npmuser \
+    && useradd deploy \
     && yum install -y epel-release \
     && yum install -y wget npm which git make bzip2 \
     && yum clean all \
